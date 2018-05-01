@@ -1,4 +1,4 @@
-FROM xataz/alpine:3.7
+FROM arm64v8/alpine:3.7
 
 LABEL description="sickrage based on alpine" \
       tags="latest" \
@@ -27,7 +27,7 @@ COPY rootfs /
 RUN chmod +x /usr/local/bin/startup /etc/s6.d/*/*
 
 VOLUME ["/config"]
-EXPOSE 8081
+EXPOSE 8082
 
 ENTRYPOINT ["/usr/local/bin/startup"]
 CMD ["/bin/s6-svscan", "/etc/s6.d"]
