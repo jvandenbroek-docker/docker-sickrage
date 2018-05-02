@@ -18,6 +18,8 @@ RUN export BUILD_DEPS="py2-pip" \
                 unrar \
                 libmediainfo \
                 mediainfo \
+                nodejs \
+                tzdata \
                 ${BUILD_DEPS} \
     && git clone https://github.com/SickRage/SickRage.git /SickRage \
     && apk del ${BUILD_DEPS} \
